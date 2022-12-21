@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title> Homepage </title>
+        
+        <style>
+            
+      
+      .title{
+        text-align: center;
+        background-color: rgb(125, 198, 231);
+        color: wheat;
+        font-size: 70;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        height: 15%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+        </style>
+    </head>
+    <body>
+        <h2 class="title">
+            Healthcare Hospital
+          </h2>
+          
+        <h3 align="center" style="color:#4c7faf; font-size:x-large">Patients Data</h3>
+        
+        <center>
+        <table 
+        border="2px solid"
+        style="background-color: rgb(125, 198, 231)"
+        align="center"
+        width="30%"
+        height="15%"">
+            <tr>
+                <th>Sr No</th>
+                <th>Patient Name</th>
+                <th>Birthdate</th>
+                <th>Blood Group</th>
+                <th>Gender</th>
+                <th>Symptoms</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for x in d %}
+            <tr>
+                <th>{{loop.index}}</th>
+            
+                
+                <td>{{x.1}}</td>
+                <td>{{x.2}}</td>
+                <td>{{x.3}}</td>
+                <td>{{x.4}}</td> 
+                <td>{{x.5}}</td> 
+                <td><a href="/edit/{{x.0}}">Edit</a></td>
+                <!-- x.0 binds record to id column -->
+                <td><a href="/delete/{{x.0}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+        
+        <!-- <p class="button" align="center">
+            <a href="/create">Register New Patient</a>
+        </p> -->
+        <div style="padding-top: 20px;">
+        <a href="/create"><button type="button" class="btn btn-primary"> Register New Patient</button></button></a>
+    </div>
+    </center>
+    
+    
+    </body>
+</html>

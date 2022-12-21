@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Add Record</title>
+    <style>
+      .title{
+        text-align: center;
+        background-color: rgb(125, 198, 231);
+        color: antiquewhite;
+        font-size: 70;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        height: 15%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .button {
+        background-color: #4c7faf;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="title">
+      Healthcare Hospital
+    </h2>
+    
+    <h2 align="center" style="color:#4c7faf; font-size:x-large">Patient Registration Form</h2>
+
+    <form method="POST" action="/store">
+      <table
+        border="2px solid"
+        style="background-color: rgb(125, 198, 231)"
+        align="center"
+        width=60%
+        height=40%
+      >
+        <tr>
+          <th align="center"><label for="name"> Full Name </label></th>
+          <td>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Name"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <th align="center"><label for="date"> Birth Date </label></th>
+          <td><input type="date" name="date" id="date" required/></td>
+        </tr>
+
+        <tr>
+          <th align="center"><label for="bg">Blood Group</label></th>
+          <td>
+            <select id="bg" name="bg">
+              <option value="A+">A+</option>
+              <option value="B+">B+</option>
+              <option value="O+">O+</option>
+              <option value="AB+">AB+</option>
+              <option value="A-">A-</option>
+              <option value="AB+">B-</B-></option>
+              <option value="AB+">AB-</option>
+              <option value="AB+">O-</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <th align="center" ;">Gender</td>
+
+          <td>
+            <input id="M" name="gender" type="radio" value="Male" />
+
+            <label for="M">M</label>
+
+            <input id="F" name="gender" type="radio" value="Female" />
+
+            <label for="F">F</label>
+
+            <input id="other" name="gender" type="radio" value="Other" />
+
+            <label for="other">Prefer not to say</label>
+          </td>
+        </tr>
+        <tr>
+          <th align="center">Symptoms(if any)</th>
+          <td >
+            <input type="checkbox" id="cough" name="symptoms" value="Cough">
+            <label for="cough"> Cough</label><br>
+            <input type="checkbox" id="fever" name="symptoms" value="Fever" >
+            <label for="fever"> Fever</label><br>
+            <input type="checkbox" id="dizziness" name="symptoms" value="Dizziness" >
+            <label for="dizziness"> Dizziness</label><br>
+            <input type="checkbox" id="diarrhea" name="symptoms" value="Diarrhea" >
+            <label for="diarrhea"> Diarrhea</label><br>
+            <input type="checkbox" id="no" name="symptoms" value="No Symptoms" >
+            <label for="no"> No Symptoms</label><br>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" name="send" value="Submit" class="button" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
